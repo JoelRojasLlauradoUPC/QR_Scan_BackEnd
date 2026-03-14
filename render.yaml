@@ -5,12 +5,13 @@ services:
     dockerfilePath: ./Dockerfile
     autoDeploy: true
     envVars:
-      - key: DB_HOST
+      - key: DB_PROVIDER
+        value: mongo
+      - key: MONGO_URI
         sync: false
-      - key: DB_PORT
-        value: "3306"
-      - key: DB_USER
-        sync: false
-      - key: DB_PASS
-        sync: false
+      - key: MONGO_DB
+        value: qr_app
+      - key: MONGO_COLLECTION
+        value: event_tickets
+
 

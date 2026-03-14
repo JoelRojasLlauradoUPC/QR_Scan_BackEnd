@@ -8,6 +8,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.FindOneAndUpdateOptions;
+import com.mongodb.client.model.IndexOptions;
 import com.mongodb.client.model.ReturnDocument;
 import com.mongodb.client.model.Sorts;
 import com.mongodb.client.model.Updates;
@@ -160,7 +161,7 @@ public class MongoTicketRepository implements TicketRepository {
         MongoDatabase db = sharedClient.getDatabase(dbName);
         MongoCollection<Document> mongoCollection = db.getCollection(collectionName);
 
-        mongoCollection.createIndex(new Document("hash", 1), new Document("unique", true));
+        mongoCollection.createIndex(new Document("hash", 1), new IndexOptions().unique(true));
         mongoCollection.createIndex(new Document("correo_electronico", 1));
         mongoCollection.createIndex(new Document("consumed", 1));
 
@@ -179,4 +180,5 @@ public class MongoTicketRepository implements TicketRepository {
         return fallback;
     }
 }
+
 

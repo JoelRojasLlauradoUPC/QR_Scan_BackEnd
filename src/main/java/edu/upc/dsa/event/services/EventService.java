@@ -1,8 +1,8 @@
 package edu.upc.dsa.event.services;
 
+import edu.upc.dsa.event.config.TicketRepositoryFactory;
 import edu.upc.dsa.event.exception.ApiException;
 import edu.upc.dsa.event.model.Ticket;
-import edu.upc.dsa.event.repository.JdbcTicketRepository;
 import edu.upc.dsa.event.service.EventManager;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -27,7 +27,7 @@ public class EventService {
     private final EventManager eventManager;
 
     public EventService() {
-        this(new EventManager(new JdbcTicketRepository()));
+        this(new EventManager(TicketRepositoryFactory.create()));
     }
 
     EventService(EventManager eventManager) {
@@ -144,6 +144,7 @@ public class EventService {
         return new ApiException(500, "DB_ERROR", message + ": " + detail);
     }
 }
+
 
 
 

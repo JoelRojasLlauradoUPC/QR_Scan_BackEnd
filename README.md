@@ -91,3 +91,34 @@ Variables de conexion soportadas (env o `-D` JVM):
 
 - `src/test/java/edu/upc/dsa/event/service/EventManagerTest.java`
 
+## Deploy en Render (Docker)
+
+Si Render solo te deja elegir entre `docker`, `node`, `python`, etc., crea el servicio como **Docker**.
+
+Archivos ya preparados en el repo:
+
+- `Dockerfile`
+- `.dockerignore`
+
+Variables de entorno recomendadas en Render:
+
+- `DB_HOST`
+- `DB_PORT` (normalmente `3306`)
+- `DB_USER`
+- `DB_PASS`
+
+`PORT` y `HOST` los gestiona Render (tu `Main` ya los lee por entorno).
+
+Tambien puedes usar Blueprint con `render.yaml` para crear el servicio automaticamente desde el repo.
+
+### MongoDB Atlas (gratis)
+
+Si quieres desplegar sin MariaDB, activa Mongo con estas variables:
+
+- `DB_PROVIDER=mongo`
+- `MONGO_URI` (cadena de conexion de Atlas)
+- `MONGO_DB=qr_app`
+- `MONGO_COLLECTION=event_tickets`
+
+Con `DB_PROVIDER=mongo`, el backend deja de inicializar scripts SQL y usa MongoDB como almacenamiento principal.
+
