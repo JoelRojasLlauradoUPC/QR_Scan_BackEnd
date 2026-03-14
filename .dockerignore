@@ -1,0 +1,17 @@
+.git
+.gitignore
+.idea
+.vscode
+
+# Build output
+target
+
+# Local docs and temp files
+*.log
+*.tmp
+*.swp
+
+# Render/local metadata
+.DS_Store
+Thumbs.db
+
