@@ -109,6 +109,14 @@
         </plugins>
     </build>
 
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Maven Central</name>
+            <url>https://repo1.maven.org/maven2</url>
+        </repository>
+    </repositories>
+
     <properties>
         <jersey.version>2.24</jersey.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

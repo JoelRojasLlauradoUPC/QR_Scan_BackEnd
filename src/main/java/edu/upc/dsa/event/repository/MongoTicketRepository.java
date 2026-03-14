@@ -1,14 +1,13 @@
 package edu.upc.dsa.event.repository;
 
 import com.mongodb.MongoException;
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
 import com.mongodb.client.FindIterable;
-import com.mongodb.client.MongoClient;
-import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.FindOneAndUpdateOptions;
-import com.mongodb.client.model.IndexOptions;
 import com.mongodb.client.model.ReturnDocument;
 import com.mongodb.client.model.Sorts;
 import com.mongodb.client.model.Updates;
@@ -23,7 +22,6 @@ import java.util.Optional;
 
 public class MongoTicketRepository implements TicketRepository {
 
-    private static final String DEFAULT_URI = "mongodb://localhost:27017";
     private static final String DEFAULT_DB = "qr_app";
     private static final String DEFAULT_COLLECTION = "event_tickets";
 
@@ -148,24 +146,18 @@ public class MongoTicketRepository implements TicketRepository {
     }
 
     private MongoCollection<Document> resolveCollection() {
-        String uri = read("MONGO_URI", DEFAULT_URI);
+        String uri = readRequired("MONGO_URI");
         String dbName = read("MONGO_DB", DEFAULT_DB);
         String collectionName = read("MONGO_COLLECTION", DEFAULT_COLLECTION);
 
         synchronized (MongoTicketRepository.class) {
             if (sharedClient == null) {
-                sharedClient = MongoClients.create(uri);
+                sharedClient = new MongoClient(new MongoClientURI(uri));
             }
         }
 
         MongoDatabase db = sharedClient.getDatabase(dbName);
-        MongoCollection<Document> mongoCollection = db.getCollection(collectionName);
-
-        mongoCollection.createIndex(new Document("hash", 1), new IndexOptions().unique(true));
-        mongoCollection.createIndex(new Document("correo_electronico", 1));
-        mongoCollection.createIndex(new Document("consumed", 1));
-
-        return mongoCollection;
+        return db.getCollection(collectionName);
     }
 
     private String read(String key, String fallback) {
@@ -179,6 +171,17 @@ public class MongoTicketRepository implements TicketRepository {
         }
         return fallback;
     }
+
+    private String readRequired(String key) {
+        String value = read(key, null);
+        if (value == null || value.trim().isEmpty()) {
+            throw new IllegalStateException("Falta la variable obligatoria: " + key);
+        }
+        return value.trim();
+    }
 }
+
+
+
 
 

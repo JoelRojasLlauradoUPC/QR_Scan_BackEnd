@@ -62,7 +62,7 @@ mysql --default-character-set=utf8mb4 -u root -p < src/main/resources/db/schema.
 mysql --default-character-set=utf8mb4 -u root -p < src/main/resources/db/seed.sql
 ```
 
-Si prefieres, al arrancar el backend tambien se ejecutan automaticamente `schema.sql` y `seed.sql`.
+El backend ya no ejecuta `schema.sql` ni `seed.sql` automaticamente al arrancar.
 
 El `seed.sql` se genera con `ON DUPLICATE KEY UPDATE` usando `hash` unico, por lo que es idempotente.
 

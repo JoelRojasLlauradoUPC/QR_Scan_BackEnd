@@ -1,7 +1,5 @@
 package edu.upc.dsa;
 
-import edu.upc.dsa.event.config.DatabaseInitializer;
-import edu.upc.dsa.event.config.PersistenceProvider;
 import io.swagger.jaxrs.config.BeanConfig;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.grizzly.http.server.StaticHttpHandler;
@@ -9,7 +7,6 @@ import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
 
 import java.net.URI;
-import java.sql.SQLException;
 
 /**
  * Main class.
@@ -23,14 +20,6 @@ public class Main {
      * @return Grizzly HTTP server.
      */
     public static HttpServer startServer() {
-        if (!PersistenceProvider.isMongo()) {
-            try {
-                DatabaseInitializer.initialize();
-            } catch (SQLException ex) {
-                throw new RuntimeException("No se pudo inicializar la base de datos", ex);
-            }
-        }
-
         // Only expose the new event-access API modules.
         final ResourceConfig rc = new ResourceConfig().packages("edu.upc.dsa.event");
 
