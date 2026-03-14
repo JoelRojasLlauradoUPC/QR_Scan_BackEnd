@@ -13,6 +13,7 @@ import com.mongodb.client.model.Sorts;
 import com.mongodb.client.model.Updates;
 import edu.upc.dsa.event.model.Ticket;
 import org.bson.Document;
+import org.bson.conversions.Bson;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -69,7 +70,7 @@ public class MongoTicketRepository implements TicketRepository {
     @Override
     public List<Ticket> findByConsumed(boolean consumed) throws SQLException {
         try {
-            FindIterable<Document> docs = collection.find(Filters.eq("consumed", consumed)).sort(Sorts.ascending("hash"));
+            FindIterable<Document> docs = collection.find(consumedFilter(consumed)).sort(Sorts.ascending("hash"));
             return mapList(docs);
         } catch (MongoException ex) {
             throw new SQLException("Error en MongoDB al listar por estado", ex);
@@ -80,7 +81,7 @@ public class MongoTicketRepository implements TicketRepository {
     public boolean markConsumed(String hash) throws SQLException {
         try {
             Document updated = collection.findOneAndUpdate(
-                    Filters.and(Filters.eq("hash", hash), Filters.eq("consumed", false)),
+                    Filters.and(Filters.eq("hash", hash), consumedFilter(false)),
                     Updates.combine(
                             Updates.set("consumed", true),
                             Updates.set("consumed_at", new Date())
@@ -91,6 +92,18 @@ public class MongoTicketRepository implements TicketRepository {
         } catch (MongoException ex) {
             throw new SQLException("Error en MongoDB al consumir la entrada", ex);
         }
+    }
+
+    private Bson consumedFilter(boolean consumed) {
+        if (consumed) {
+            return Filters.eq("consumed", true);
+        }
+
+        // Documentos importados sin `consumed` se consideran no usados.
+        return Filters.or(
+                Filters.eq("consumed", false),
+                Filters.exists("consumed", false)
+        );
     }
 
     private List<Ticket> mapList(FindIterable<Document> docs) {
@@ -180,6 +193,7 @@ public class MongoTicketRepository implements TicketRepository {
         return value.trim();
     }
 }
+
 
 
 
