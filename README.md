@@ -1,19 +1,93 @@
-# Fishing Game Backend API
+# QR Event Access Backend API
 
-This backend exposes a simple game API with authentication, catalog, in-game actions, and a shop.
+Backend Java (Jersey + Grizzly + MariaDB) para validar entradas de evento mediante QR.
 
-Key endpoints:
-- POST /auth/register, POST /auth/login
-- GET /catalog/species, GET /catalog/rods
-- GET /me, GET /me/inventory
-- POST /game/capture
-- POST /shop/rods/{rodId}/buy
+## Endpoints
 
-Implementation notes:
-- No DTOs are used. Domain models are returned. Sensitive fields are hidden (User.getPassword annotated with @XmlTransient).
-- GameManager is a wrapper and keeps in-memory state. It can be migrated to repositories later.
-- Inventory returns unmodifiable maps; it holds equippedRodId and helpers for common game logic.
+- `GET /api/event/verify/{hash}`
+  - Consulta una entrada sin consumirla.
+  - `200` si existe, `404` si no existe.
 
-Tests:
-- Existing tests are deprecated and should be updated to match the new structure if needed.
+- `GET /api/event/enter/{hash}`
+  - Valida acceso y marca la entrada como consumida.
+  - `200` si valida, `404` si no existe, `409` si ya fue usada.
+
+- `GET /api/event/tickets`
+  - Lista todas las entradas.
+
+- `GET /api/event/tickets/email/{email}`
+  - Lista todas las entradas de un usuario segun su correo electronico.
+
+- `GET /api/event/tickets/used`
+  - Lista todas las entradas usadas.
+
+- `GET /api/event/tickets/unused`
+  - Lista todas las entradas no usadas.
+
+### Respuesta de entrada
+
+```json
+{
+  "nombre": "Leonardo",
+  "apellido": "Andreoli",
+  "correo_electronico": "delegacio.eetac@upc.edu",
+  "tipo": 4,
+  "pmr": false,
+  "hash": "HnmdIOCoTKusuKcCSyQCugr9v30fcQ5J",
+  "numero_local": 2,
+  "consumed": false
+}
+```
+
+## Base de datos
+
+- Script de esquema: `src/main/resources/db/schema.sql`
+- Script de datos de prueba: `src/main/resources/db/seed.sql`
+- JSON fuente de entradas: `src/main/resources/db/input/tickets.raw.json`
+- Generador de seed desde JSON: `scripts/generate-seed-from-json.ps1`
+
+### Cargar entradas desde JSON
+
+1. Pega o actualiza el JSON en `src/main/resources/db/input/tickets.raw.json`.
+2. Regenera `seed.sql` con:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\generate-seed-from-json.ps1
+```
+
+3. Ejecuta esquema y seed sobre MariaDB:
+
+```powershell
+mysql --default-character-set=utf8mb4 -u root -p < src/main/resources/db/schema.sql
+mysql --default-character-set=utf8mb4 -u root -p < src/main/resources/db/seed.sql
+```
+
+Si prefieres, al arrancar el backend tambien se ejecutan automaticamente `schema.sql` y `seed.sql`.
+
+El `seed.sql` se genera con `ON DUPLICATE KEY UPDATE` usando `hash` unico, por lo que es idempotente.
+
+Comprobacion rapida de acentos/ñ:
+
+```powershell
+mysql --default-character-set=utf8mb4 -u root -p -D qr_app -e "SELECT nombre, apellido FROM event_tickets WHERE apellido LIKE '%ñ%' OR apellido LIKE '%á%' LIMIT 10;"
+```
+
+Variables de conexion soportadas (env o `-D` JVM):
+
+- `DB_HOST` (default `127.0.0.1`)
+- `DB_PORT` (default `3306`)
+- `DB_NAME` (default `qr_app`)
+- `DB_USER` (default `root`)
+- `DB_PASS` (default `root`)
+
+## Estructura nueva
+
+- `src/main/java/edu/upc/dsa/event/services/EventService.java`
+- `src/main/java/edu/upc/dsa/event/service/EventManager.java`
+- `src/main/java/edu/upc/dsa/event/repository/JdbcTicketRepository.java`
+- `src/main/java/edu/upc/dsa/event/model/Ticket.java`
+
+## Tests
+
+- `src/test/java/edu/upc/dsa/event/service/EventManagerTest.java`
 

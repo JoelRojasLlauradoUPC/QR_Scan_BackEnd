@@ -1,0 +1,633 @@
+[
+  {
+    "nombre": "Marc",
+    "apellido": "García López",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 3,
+    "pmr": false,
+    "hash": "UTKWCL5dLCzqATQ4yocmj3KjEtjFl7x4",
+    "numero_local": 0
+  },
+  {
+    "nombre": "Marc",
+    "apellido": "García López",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "JTYw517hQz4ek7gpmNm3thegL4ggJLj8",
+    "numero_local": 1
+  },
+  {
+    "nombre": "Marc",
+    "apellido": "García López",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "wthrFkgiJAUA63FlvDiP4AsV248JBVLK",
+    "numero_local": 2
+  },
+  {
+    "nombre": "Laia",
+    "apellido": "Fernández Puig",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 3,
+    "pmr": false,
+    "hash": "O0Xf6GdhkTnrlp6xWHaOF4BMGBihtC6V",
+    "numero_local": 0
+  },
+  {
+    "nombre": "Laia",
+    "apellido": "Fernández Puig",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "wJj06PNqVp7EUxu8LHMlAUMGy1uCBPFl",
+    "numero_local": 1
+  },
+  {
+    "nombre": "Laia",
+    "apellido": "Fernández Puig",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "Yqh78pRr24K2yZTdj4CRRnw5T5yv9egQ",
+    "numero_local": 2
+  },
+  {
+    "nombre": "Laia",
+    "apellido": "Fernández Puig",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "ER4CRXTUCmHKGOBjFgEIYLEyIpiqmB7P",
+    "numero_local": 3
+  },
+  {
+    "nombre": "Jordi",
+    "apellido": "Martínez Soler",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 3,
+    "pmr": true,
+    "hash": "syce4VLwmNG6TKhJ5XU3ZH0LWvMjYbJE",
+    "numero_local": 0
+  },
+  {
+    "nombre": "Jordi",
+    "apellido": "Martínez Soler",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": true,
+    "hash": "Uj1wb64VS488c2JLpLJYNRqR5doEcT6S",
+    "numero_local": 1
+  },
+  {
+    "nombre": "Jordi",
+    "apellido": "Martínez Soler",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": true,
+    "hash": "NpXkiJLU2LY86LRqvqbC9B4wpK9eKX7n",
+    "numero_local": 2
+  },
+  {
+    "nombre": "Jordi",
+    "apellido": "Martínez Soler",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": true,
+    "hash": "6HmrvxnPxWYyHDTPZ3rxbeVrQAw1aGnY",
+    "numero_local": 3
+  },
+  {
+    "nombre": "Jordi",
+    "apellido": "Martínez Soler",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": true,
+    "hash": "zHvoHOhsvEMIQPPrfZStgy72dxfg33Y8",
+    "numero_local": 4
+  },
+  {
+    "nombre": "Eva",
+    "apellido": "Sánchez Roca",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 3,
+    "pmr": false,
+    "hash": "lwo8FBLQqJhdpYeIBQbzdntooOryLAq7",
+    "numero_local": 0
+  },
+  {
+    "nombre": "Eva",
+    "apellido": "Sánchez Roca",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "AohKPZSOd31Sx1OfFAjC2iRYo4uiaKpF",
+    "numero_local": 1
+  },
+  {
+    "nombre": "Arnau",
+    "apellido": "Torres Vidal",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 3,
+    "pmr": false,
+    "hash": "hgGRUa2hTAzWxogmdNmIYFS2QinRbVAp",
+    "numero_local": 0
+  },
+  {
+    "nombre": "Arnau",
+    "apellido": "Torres Vidal",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "XcMdJWRGnYgCAjs1nALW5N1G9cyjZi6w",
+    "numero_local": 1
+  },
+  {
+    "nombre": "Arnau",
+    "apellido": "Torres Vidal",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "sf7Mbch9LpakvBYxKMWu5bWBIIOq6n7K",
+    "numero_local": 2
+  },
+  {
+    "nombre": "Núria",
+    "apellido": "Jiménez Mas",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 1,
+    "pmr": true,
+    "hash": "cW4qfc2GzUSxADH9SykWs1iJVb1St8hK",
+    "numero_local": 1
+  },
+  {
+    "nombre": "Núria",
+    "apellido": "Jiménez Mas",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": true,
+    "hash": "B9cXI1j9DiKpjmpGjo6X2myb0ghuqvMs",
+    "numero_local": 2
+  },
+  {
+    "nombre": "Núria",
+    "apellido": "Jiménez Mas",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": true,
+    "hash": "tYWq9ZUAz7GngmKRGwCteRAcRaF56QwN",
+    "numero_local": 3
+  },
+  {
+    "nombre": "Núria",
+    "apellido": "Jiménez Mas",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": true,
+    "hash": "8fdvQH4p4glHhw3uRqKf1atruSCKGf6L",
+    "numero_local": 4
+  },
+  {
+    "nombre": "David",
+    "apellido": "López Casas",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 1,
+    "pmr": false,
+    "hash": "3ixKjlFKhmr97qVB7Y9RAzBJ3wVoc8YI",
+    "numero_local": 1
+  },
+  {
+    "nombre": "David",
+    "apellido": "López Casas",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "A7HUyUst089Bf8AIguyIcCABTB9cBUqq",
+    "numero_local": 2
+  },
+  {
+    "nombre": "David",
+    "apellido": "López Casas",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "mrvvTsYQopwKsYeKKZQyJGgJKmTcfZRb",
+    "numero_local": 3
+  },
+  {
+    "nombre": "David",
+    "apellido": "López Casas",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "BB1UdlgKQK5dWPKLLF7QgCkApPA07EjV",
+    "numero_local": 4
+  },
+  {
+    "nombre": "David",
+    "apellido": "López Casas",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "bFLNIr9pJ2cLUq1wzoZG1dyKbQwYdf90",
+    "numero_local": 5
+  },
+  {
+    "nombre": "Marta",
+    "apellido": "Pérez Ibáñez",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 1,
+    "pmr": false,
+    "hash": "rL0tIcXOZff1ThBYoiFI6u0PS3lCwBXM",
+    "numero_local": 1
+  },
+  {
+    "nombre": "Marta",
+    "apellido": "Pérez Ibáñez",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "7Q5Mo7b85ecbn3FHPfpaK8xehsy4jDCV",
+    "numero_local": 2
+  },
+  {
+    "nombre": "Pau",
+    "apellido": "Romero Ferrer",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 1,
+    "pmr": false,
+    "hash": "hfmGbumhiNW75w8tdITCOpBAWQZiDZEB",
+    "numero_local": 1
+  },
+  {
+    "nombre": "Pau",
+    "apellido": "Romero Ferrer",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "MbRiRog4TDfjKoxrzi7kdS6CUozNTD53",
+    "numero_local": 2
+  },
+  {
+    "nombre": "Pau",
+    "apellido": "Romero Ferrer",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "kcPCpU36K1q6QiVhdLiZVJqI6X03hZZw",
+    "numero_local": 3
+  },
+  {
+    "nombre": "Carla",
+    "apellido": "Gómez Llopis",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 2,
+    "pmr": true,
+    "hash": "pKzPprhwcax2CXezDNe3mRL9pc3mqDqc",
+    "numero_local": 1
+  },
+  {
+    "nombre": "Carla",
+    "apellido": "Gómez Llopis",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": true,
+    "hash": "q1mgMQcVfeR9Zh01as5TTpWqHa0ji7VY",
+    "numero_local": 2
+  },
+  {
+    "nombre": "Carla",
+    "apellido": "Gómez Llopis",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": true,
+    "hash": "OoozlnTuD1wDFFYvIxzfQ7VHQBKvZVxk",
+    "numero_local": 3
+  },
+  {
+    "nombre": "Carla",
+    "apellido": "Gómez Llopis",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": true,
+    "hash": "t2Fw3wHFa79idjzzUXimvxLB31Sblr07",
+    "numero_local": 4
+  },
+  {
+    "nombre": "Sergi",
+    "apellido": "Moreno Esteve",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 2,
+    "pmr": false,
+    "hash": "YPywSACPqFZad6IdEDy8N4IbJkp0YE96",
+    "numero_local": 1
+  },
+  {
+    "nombre": "Sergi",
+    "apellido": "Moreno Esteve",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "WyhZzj43R2cKRpukgNmKijRkVECsx5KV",
+    "numero_local": 2
+  },
+  {
+    "nombre": "Sergi",
+    "apellido": "Moreno Esteve",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "ZOG9AWlxmcZyabaXNMhJnF1RMTnrfHj2",
+    "numero_local": 3
+  },
+  {
+    "nombre": "Sergi",
+    "apellido": "Moreno Esteve",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "eK4aU45jQ0gqieqxmyVydShsCdK8QSes",
+    "numero_local": 4
+  },
+  {
+    "nombre": "Sergi",
+    "apellido": "Moreno Esteve",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "YxJNfj7Jww73bdkScydPmJ2YIUKGqrtt",
+    "numero_local": 5
+  },
+  {
+    "nombre": "Anna",
+    "apellido": "Ruiz Palau",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 2,
+    "pmr": false,
+    "hash": "DIFd3UuQkJTQgez4iVR7xThfJ8mpGZbv",
+    "numero_local": 1
+  },
+  {
+    "nombre": "Anna",
+    "apellido": "Ruiz Palau",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "KtUl6TEG4XdN2LZaqFmusRR7PCD2rDYH",
+    "numero_local": 2
+  },
+  {
+    "nombre": "Miquel",
+    "apellido": "Díaz Cabot",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": true,
+    "hash": "SwHbXIiDtXTIKjR6hW1BCPBsfurIXxok",
+    "numero_local": 1
+  },
+  {
+    "nombre": "Miquel",
+    "apellido": "Díaz Cabot",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": true,
+    "hash": "2BtRpLxqwBYMascnTmj2Crq9kQyJGrH2",
+    "numero_local": 2
+  },
+  {
+    "nombre": "Miquel",
+    "apellido": "Díaz Cabot",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": true,
+    "hash": "VPSqwUtlSBl6pbRQeCUAxBjdkxNvv1ul",
+    "numero_local": 3
+  },
+  {
+    "nombre": "Berta",
+    "apellido": "Hernández Font",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "Cdf9MjFlRPPNOBuIfWvzEPq6f6w2jCPE",
+    "numero_local": 1
+  },
+  {
+    "nombre": "Berta",
+    "apellido": "Hernández Font",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "xXZBfwzi5TMnH643aDuWmcodmrwstRVT",
+    "numero_local": 2
+  },
+  {
+    "nombre": "Berta",
+    "apellido": "Hernández Font",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "mZTTtcfTUVDr9MBZ0eJ3rJxVv5ZITPXC",
+    "numero_local": 3
+  },
+  {
+    "nombre": "Berta",
+    "apellido": "Hernández Font",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "HDg6u5xL6qcWqeBMWg72q4cOzDxtTKt2",
+    "numero_local": 4
+  },
+  {
+    "nombre": "Oriol",
+    "apellido": "Alonso Bosch",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "qCF6x96zTs4jgQRUeO56TlLXMauv0JxA",
+    "numero_local": 1
+  },
+  {
+    "nombre": "Oriol",
+    "apellido": "Alonso Bosch",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "aFrrEJlGT8u3A5h8A9FWnNYS9VABQFUx",
+    "numero_local": 2
+  },
+  {
+    "nombre": "Oriol",
+    "apellido": "Alonso Bosch",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "ucgoEP2JXlfWrBnM1NK4cCUZtHuXek8s",
+    "numero_local": 3
+  },
+  {
+    "nombre": "Oriol",
+    "apellido": "Alonso Bosch",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "Gle81p3Av1EhR9yvwIAsxRLpXGguRNQ9",
+    "numero_local": 4
+  },
+  {
+    "nombre": "Oriol",
+    "apellido": "Alonso Bosch",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "o0eUxnqxyrJfg0iCQq9fk89Sg7N2HVSq",
+    "numero_local": 5
+  },
+  {
+    "nombre": "Júlia",
+    "apellido": "Muñoz Vergés",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "Eo1edwAxyIYA0WZts6qJlLc1R4iEXAuZ",
+    "numero_local": 1
+  },
+  {
+    "nombre": "Júlia",
+    "apellido": "Muñoz Vergés",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "BMdcCSNUYjnW0RGe7TjrSKNXJDMF5HGU",
+    "numero_local": 2
+  },
+  {
+    "nombre": "Gerard",
+    "apellido": "Navarro Sala",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 0,
+    "pmr": true,
+    "hash": "LoBJmJ7X5sfMPFnstlrqb5ASAoZL1g0R",
+    "numero_local": 1
+  },
+  {
+    "nombre": "Gerard",
+    "apellido": "Navarro Sala",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": true,
+    "hash": "SDxYJThEWhIX0riJ33f1u5oAaO6RAk5l",
+    "numero_local": 2
+  },
+  {
+    "nombre": "Gerard",
+    "apellido": "Navarro Sala",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": true,
+    "hash": "MzlSukm4YbC7U9XkvXbKAnCC99fYqU8W",
+    "numero_local": 3
+  },
+  {
+    "nombre": "Alba",
+    "apellido": "Domínguez Cors",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 0,
+    "pmr": false,
+    "hash": "IhUeEbJeBqS5fQb4wp2HCn2ZpayjQL2R",
+    "numero_local": 1
+  },
+  {
+    "nombre": "Alba",
+    "apellido": "Domínguez Cors",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "MhkQtjmy34Trb2YVPHK4R5Ja1ZS1U943",
+    "numero_local": 2
+  },
+  {
+    "nombre": "Alba",
+    "apellido": "Domínguez Cors",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "953uWhFT2s2bIaCBeRaEclWgASKjbj9d",
+    "numero_local": 3
+  },
+  {
+    "nombre": "Alba",
+    "apellido": "Domínguez Cors",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "VGHBrmVsxIUPcxED4QZjeffZteYZPtee",
+    "numero_local": 4
+  },
+  {
+    "nombre": "Roger",
+    "apellido": "Ramos Pla",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 0,
+    "pmr": false,
+    "hash": "LEKv0KDs5Fw69myJiuAYmek9CspyisoB",
+    "numero_local": 1
+  },
+  {
+    "nombre": "Roger",
+    "apellido": "Ramos Pla",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "jfPi3XOWSD5X8Hnl7uYAZ06Z3b2NaEXq",
+    "numero_local": 2
+  },
+  {
+    "nombre": "Roger",
+    "apellido": "Ramos Pla",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "KK11dZqKm7AX1arnbHEDmAynM57TfCnS",
+    "numero_local": 3
+  },
+  {
+    "nombre": "Roger",
+    "apellido": "Ramos Pla",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "YKvJL6d4jrO5y7Wmkx4Blx840Ihl9Vej",
+    "numero_local": 4
+  },
+  {
+    "nombre": "Roger",
+    "apellido": "Ramos Pla",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": false,
+    "hash": "UU0gSChU7zk2XMZAGfjZ1UcNXX9sc8uj",
+    "numero_local": 5
+  },
+  {
+    "nombre": "Cristina",
+    "apellido": "Puig Solà",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 0,
+    "pmr": true,
+    "hash": "FyxTyJRas1PWqkm3ISBdmGgj8ae1dS8j",
+    "numero_local": 1
+  },
+  {
+    "nombre": "Cristina",
+    "apellido": "Puig Solà",
+    "correo_electronico": "de3tac.test.entrades@yopmail.com",
+    "tipo": 4,
+    "pmr": true,
+    "hash": "0P1lS8buEaStQq8G4D3gV2kPCf657tZo",
+    "numero_local": 2
+  }
+]
+

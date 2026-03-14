@@ -1,7 +1,7 @@
 package edu.upc.dsa;
 
+import edu.upc.dsa.event.config.DatabaseInitializer;
 import io.swagger.jaxrs.config.BeanConfig;
-import io.swagger.jersey.listing.ApiListingResourceJSON;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.grizzly.http.server.StaticHttpHandler;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
@@ -9,6 +9,7 @@ import org.glassfish.jersey.server.ResourceConfig;
 
 import java.io.IOException;
 import java.net.URI;
+import java.sql.SQLException;
 
 /**
  * Main class.
@@ -23,9 +24,14 @@ public class Main {
      * @return Grizzly HTTP server.
      */
     public static HttpServer startServer() {
-        // create a resource config that scans for JAX-RS resources and providers
-        // in edu.upc.dsa package
-        final ResourceConfig rc = new ResourceConfig().packages("edu.upc.dsa.services");
+        try {
+            DatabaseInitializer.initialize();
+        } catch (SQLException ex) {
+            throw new RuntimeException("No se pudo inicializar la base de datos", ex);
+        }
+
+        // Only expose the new event-access API modules.
+        final ResourceConfig rc = new ResourceConfig().packages("edu.upc.dsa.event");
 
         rc.register(io.swagger.jaxrs.listing.ApiListingResource.class);
         rc.register(io.swagger.jaxrs.listing.SwaggerSerializers.class);
@@ -36,11 +42,11 @@ public class Main {
         //beanConfig.setHost("dsa1.upc.edu");
         beanConfig.setBasePath("/api");
         beanConfig.setContact("support@example.com");
-        beanConfig.setDescription("REST API for Tracks Manager");
+        beanConfig.setDescription("REST API para acceso y verificacion de entradas mediante QR");
         beanConfig.setLicenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html");
-        beanConfig.setResourcePackage("edu.upc.dsa.services");
+        beanConfig.setResourcePackage("edu.upc.dsa.event.services");
         beanConfig.setTermsOfServiceUrl("http://www.example.com/resources/eula");
-        beanConfig.setTitle("REST API");
+        beanConfig.setTitle("QR Event Access API");
         beanConfig.setVersion("1.0.0");
         beanConfig.setScan(true);
 
